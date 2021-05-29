@@ -1,0 +1,11 @@
+n=int(input())
+a=list(map(int,input().strip().split()))
+b=list(map(int,input().strip().split()))
+dp=[]
+dp=[0]*n
+dp[0]=max(a[0],b[0])
+i=1
+while(i!=n):
+    dp[i]=max(max(a[i],b[i])+dp[i-2],dp[i-1])
+    i=i+1
+print(dp[n-1])
