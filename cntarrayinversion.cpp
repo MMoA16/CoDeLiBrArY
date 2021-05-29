@@ -34,11 +34,12 @@ int main()
     for(i=1;i<=n;i++){
         cin>>a[i];
     }
-    int b[max(a,n)]={0};
+    maxim=max(a,n)
+    int b[maxim]={0};
     for(i=1;i<=n;i++){
-
-    if(sum(max(a,n))>sum(a[i])){
-        cnt=cnt+(sum(max(a,n))-sum(a[i]));
+    
+    if(sum(maxim)>sum(a[i])){
+        cnt=cnt+(sum(maxim)-sum(a[i]));
     }
     b[a[i]]=1;
     update(a[i],b[a[i]],max(a,n));
