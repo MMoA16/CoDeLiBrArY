@@ -1,0 +1,14 @@
+t=int(input())
+while(t!=0):
+    D,d,p,q=map(int,input().split())
+    k=D%d
+    l=D//d
+    te=p*d+(l-1)*(q*d)
+    next=te+(q*d)
+    sum=(l*(2*p*d+(l-1)*(q*d)))//2
+    if(k==0):
+        print(sum)
+    else:
+        sum=sum+(next//d)*k
+        print(sum)
+    t=t-1
